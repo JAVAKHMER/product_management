@@ -10,7 +10,7 @@ product management quiz
 
 4 Create models based on: (15 min = 4 points)
 
-      Category:
+  #Category:
 
       Name: length=100, not null
 
@@ -20,8 +20,7 @@ product management quiz
 
       Visible:default=false, not null
 
-
-      Product
+  #Product
 
       Title: length=200, not null
 
