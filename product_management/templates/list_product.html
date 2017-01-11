@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <style>
+			table {
+			    font-family: arial, sans-serif;
+			    width: 40%;
+			}
+			
+			td, th {
+			    text-align: center;
+			    padding: 8px;
+			}
+			
+	</style>
+</head>
+<body>
+ <form action="{% url 'product_list' %}" method="get">
+ 	<label for="title">Search by Title</label>
+ 	<input type="text" name="title"><br /><br />
+ 	<label for="created">Search by Created</label>
+ 	<input type="date" name="created"><br /><br />
+    <label for="category">Search by Category</label>
+    <select name="categorys">
+    	{% for category in categorys %}
+    	<option value="{{category.Name}}" />{{category.Name}}</option>
+    	{% endfor %}
+    </select>
+    <br /><br /><input type="submit" value="Search"  name="submit"/>
+    
+</form> 
+ <form action="{% url 'product_list' %}" method="get">
+ 	<br /><br /><input type="submit" value="sort ascending"  name="ascending"/>
+ </form>
+ <form action="{% url 'product_list' %}" method="get">
+ 	<br /><br /><input type="submit" value="sort descending"  name="descending"/>
+ </form>
+<table>
+	<tr><th>Title</th><th>Description</th><th>Create At</th><th>Update At</th><th>Public</th><th>Category Name</th></tr>
+	{% for product in products %}
+	<tr>
+		<td>{{ product.title }}</td><td>{{product.description}}</td><td>{{product.Created}}</td><td>{{ product.Updated }} </td><td>{{product.publish}}</td><td>{{product.category}}</td><td><a href="{% url 'update_product' product.id %}">Update</a></td><td><a href="{% url 'delete_product' product.id %}">Delete</a></td>
+	</tr>
+	{% endfor %}
+</table>
+<a href="{% url 'create_product' %}">Add New Product</a><br>
+<a href="{% url 'home' %}">Home</a>
+</body>
+</html>
