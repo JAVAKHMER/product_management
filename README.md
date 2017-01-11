@@ -10,30 +10,30 @@ product management quiz
 
 4 Create models based on: (15 min = 4 points)
 
-Category:
+      Category:
 
-Name: length=100, not null
+      Name: length=100, not null
 
-Created at: default=now, not null
+      Created at: default=now, not null
 
-Updated at:default=null, allowed null
+      Updated at:default=null, allowed null
 
-Visible:default=false, not null
+      Visible:default=false, not null
 
 
-Product
+      Product
 
-Title: length=200, not null
+      Title: length=200, not null
 
-Description: text, allowed null
+      Description: text, allowed null
 
-Created at: default=now, not null
+      Created at: default=now, not null
 
-Updated at:  default=null, allowed null
+      Updated at:  default=null, allowed null
 
-Publish: default=false, not null
+      Publish: default=false, not null
 
-Category: foreignkey of Category
+      Category: foreignkey of Category
 
 
 5 Implement create category. (30 min = 8 point)
