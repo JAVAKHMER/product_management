@@ -80,7 +80,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         "NAME": "product_management_db",
         "USER": "postgres", # Not used with sqlite3.
-        "PASSWORD": "07121994@rith", # Not used with sqlite3.
+        "PASSWORD": "07121994", # Not used with sqlite3.
         "HOST": "localhost", # Set to empty string for localhost. Not used with sqlite3.
         "PORT": "5432", # Set to empty string for default. Not used with sqlite3.
     }
